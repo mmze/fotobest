@@ -1,0 +1,77 @@
+
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <%= link_to "FOTOBEST", root_path, id: "logo", class: "navbar-brand" %>
+    <nav>
+      <ul class="navbar-nav navbar-right">
+        <li class=""><%= link_to "Home", root_path, class: "nav-link" %></li>
+        <li><%= link_to "Help", root_path, class: "nav-link" %></li>
+          <li><%= link_to "Users", root_path, class: "nav-link" %></li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", "auth/vkontakte/callback", class: "dropdown-item" %></li>
+              <li><%= link_to "Settings", root_path, class: "dropdown-item" %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Log out", root_path, class: "dropdown-item" %>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="btn btn-outline-primary" id="sigin" data-toggle="modal" data-target="#registerModal">
+              Sign In&nbsp;
+              <i class="fas fa-sign-in-alt"></i>
+            </button>
+          </li>
+          <li>
+            <%= button_tag "test", type: 'button', class: "btn btn-outline-primary", :data => {:toggle => "modal", :target => "#registerModal"}, remote: true %>
+          </li>
+      </ul>
+    </nav>
+  </div>
+
+  <%= content_tag :div, class: "modal fade", id: "registerModal",
+                                             tabindex: "-1",
+                                             role: "dialog",
+                                             :aria => { :labelledby => "exampleModalLabel", :hidden => "true"} do %>
+    <%= content_tag :div, class: "modal-dialog", role: "document" do %>
+      <%= content_tag :div, class: "modal-content" do %>
+        <%= content_tag :div, class: "modal-header" do %>
+          <h5 class="modal-title">Sign in</h5>
+          <%= button_tag type: 'button', class: "close", :data => { :dismiss => "modal"},
+                                                         :aria=>{ :lavel => "Close" } do %>
+            <span aria-hidden="true">&times;</span>
+          <% end %>
+        <% end %>
+        <%= content_tag :div, class: "modal-body" do %>
+          <%= render '/shared/base/signinmodal', layout: false %>
+        <% end %>
+        <%= content_tag(:div, class: "modal-footer") do %>
+          <%= button_tag "Sign in with facebook", type: 'button', class: "btn btn-outline-primary" do %>
+            <i class="fab fa-facebook fa-2x"></i>
+            <div>Sign in with FB</div>
+          <% end %>
+          <%= link_to "auth/vkontakte", type: 'button', class: "btn btn-outline-secondary" do %>
+            <i class="fab fa-vk fa-2x"></i>
+            <div>Sign in with VK</div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<!--   <script>
+    $(document).ready(function(){
+      $('#sigin').click(function(){
+        $.ajax({
+          url: "<%= create_path %>",
+          success: function(data){
+            $('.modal-body').append(data);
+          }
+        });
+      });
+    });
+  </script> -->
+</header>

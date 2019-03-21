@@ -1,0 +1,2 @@
+class VkUser < ApplicationRecord
+end

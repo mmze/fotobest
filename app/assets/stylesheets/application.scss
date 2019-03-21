@@ -1,0 +1,110 @@
+
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.divider {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Social button style */
+
+#sochead {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  color: #666;
+  text-align: center;
+  font-size: 18px;
+
+}
+#fblogin {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    float: left;
+    top: 40px;
+    left: 0px;
+    height: 50px;
+    text-align: left;
+    text-decoration: none solid rgb(68, 68, 68);
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 290px;
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(rgb(86, 120, 188), rgb(49, 74, 123)) repeat scroll 0% 0% / auto padding-box border-box;
+    background: rgba(0, 0, 0, 0) linear-gradient(rgb(86, 120, 188), rgb(49, 74, 123)) repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 1px solid rgb(49, 74, 123);
+    border-right: 1px solid rgb(42, 64, 105);
+    border-bottom: 1px solid rgb(42, 64, 105);
+    border-left: 1px solid rgb(42, 64, 105);
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    font: normal normal 16px/normal 'Helvetica Neue', Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', arial, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+    outline: rgb(68, 68, 68) none 0px;
+    overflow: hidden;
+    padding: 10px 18px;
+}
+
+#fbname {
+    background-position: 0px 0px;
+    bottom: 0px;
+    box-shadow: rgba(0, 0, 0, 0.0470588) 1px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    height: 48px;
+    left: 0px;
+    text-align: center;
+    text-decoration: none solid rgb(68, 68, 68);
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+    top: 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 50px;
+    align-self: flex-start;
+    background: rgba(255, 255, 255, 0.0784314) no-repeat scroll 0px 0px / auto padding-box border-box;
+    border: 0px none rgb(68, 68, 68);
+    font: normal normal 16px/normal 'Helvetica Neue', Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', arial, sans-serif;
+    outline: rgb(68, 68, 68) none 0px;
+}
+
+#fbtext {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    height: 17px;
+    text-align: left;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 150px;
+    align-self: flex-start;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal bold 16px/normal 'Helvetica Neue', Helvetica, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', arial, sans-serif;
+    margin: -3px 0px 0px 42px;
+    outline: rgb(255, 255, 255) none 0px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
